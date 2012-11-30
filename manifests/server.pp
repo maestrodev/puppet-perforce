@@ -5,6 +5,8 @@ class perforce::server($user = 'perforce') {
     group => $user,
   }
 
+  Exec { path => "/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin" }
+
   user { $user:
     ensure     => present,
     home       => '/var/local/perforce',
@@ -23,7 +25,7 @@ class perforce::server($user = 'perforce') {
     ensure => directory,
   } ->
   exec { 'p4d -r /var/local/p4root':
-    unless => 'ps -fea | grep p4d',
+    unless => 'pidof p4d',
   }
 
 }
