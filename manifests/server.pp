@@ -15,7 +15,7 @@ class perforce::server($user = 'perforce') {
   } ->
 
   wget::fetch { 'p4d':
-    source      => 'http://www.perforce.com/downloads/perforce/r12.1/bin.linux26x86_64/p4d',
+    source      => 'http://cdist2.perforce.com/perforce/r14.1/bin.linux26x86_64/p4d',
     destination => '/usr/bin',
   } ->
   file { '/usr/bin/p4d':
