@@ -1,11 +1,11 @@
-require 'bundler'
-Bundler.require(:rake)
 require 'rake/clean'
+require 'puppet-lint/tasks/puppet-lint'
 
-CLEAN.include('spec/fixtures/', 'doc', 'pkg')
+CLEAN.include('spec/fixtures/manifests/', 'spec/fixtures/modules/', 'doc', 'pkg')
 CLOBBER.include('.tmp', '.librarian')
 
 require 'puppetlabs_spec_helper/rake_tasks'
+require 'puppet_blacksmith/rake_tasks'
 
 PuppetLint.configuration.send("disable_80chars")
 
