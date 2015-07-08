@@ -1,0 +1,14 @@
+{
+  "name": "maestrodev-perforce",
+  "version": "1.0.2",
+  "author": "maestrodev",
+  "summary": "Perforce client and server",
+  "license": "Apache License, Version 2.0",
+  "source": "http://github.com/maestrodev/puppet-perforce",
+  "project_page": "http://github.com/maestrodev/puppet-perforce",
+  "issues_url": "https://github.com/maestrodev/puppet-perforce/issues",
+  "description": "Install and configure Perforce client and server",
+  "dependencies": [
+    {"name":"maestrodev/wget","version_requirement":">=0.0.1"}
+  ]
+}
