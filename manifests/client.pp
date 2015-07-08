@@ -1,3 +1,4 @@
+# Perforce client
 class perforce::client(
   $version = '15.1'
 ) {

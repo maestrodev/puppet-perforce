@@ -1,3 +1,4 @@
+# Perforce server
 class perforce::server($user = 'perforce') {
 
   File {
@@ -5,7 +6,7 @@ class perforce::server($user = 'perforce') {
     group => $user,
   }
 
-  Exec { path => "/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin" }
+  Exec { path => '/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin' }
 
   user { $user:
     ensure     => present,
